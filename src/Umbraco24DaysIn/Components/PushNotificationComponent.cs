@@ -39,10 +39,10 @@ namespace Umbraco24DaysIn.Components
 			ConfigurationManager.AppSettings["OneSignal:restUrl"];
 
 		private string TitleProperty { get; } =
-			ConfigurationManager.AppSettings["pushNotificationTitleProperty"];
+			ConfigurationManager.AppSettings["PushNotificationTitleProperty"];
 
 		private string ContentProperty { get; } =
-			ConfigurationManager.AppSettings["pushNotificationContentProperty"];
+			ConfigurationManager.AppSettings["PushNotificationContentProperty"];
 
 		private bool IsAllowedDocType(string documentTypeAlias)
 		{
