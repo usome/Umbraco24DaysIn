@@ -55,6 +55,11 @@ namespace Umbraco24DaysIn.Components
 			ContentService.Published += ContentService_Published;
 		}
 
+		public void Terminate()
+		{
+
+		}
+
 		private void ContentService_Published(IContentService sender, Umbraco.Core.Events.ContentPublishedEventArgs e)
 		{
 			using (var contextReference = _umbracoContext.EnsureUmbracoContext())
@@ -112,11 +117,6 @@ namespace Umbraco24DaysIn.Components
 					}
 				}
 			}
-		}
-
-		public void Terminate()
-		{
-			
 		}
 
 		private bool PushNotification(string title, string content, string[] segments, string link)
